@@ -6,6 +6,10 @@
   version "10.9.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.9.2.tgz#f0ab8dced5cd6c56b26765e1c0d9e4fdcc9f2a00"
 
+"@zodiac/lang-item-core@0.1.0":
+  version "0.1.0"
+  resolved "https://npm-proxy.fury.io/jamesbs/~/d/%40zodiac%2Flang-item-core/%40zodiac%2Flang-item-core-0.1.0#65d194cbc53b6361c8dffbd046a97f4e60be2c5b"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

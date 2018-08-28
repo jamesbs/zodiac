@@ -1,7 +1,7 @@
 import * as grpc from 'grpc'
 import { LangItemService } from './service'
 
-const proto = grpc.load('src/service.proto')
+const proto = grpc.load('node_modules/@zodiac/lang-item-core/src/service.proto')
 
 const server = new grpc.Server()
 

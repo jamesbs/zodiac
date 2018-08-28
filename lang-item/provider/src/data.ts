@@ -4,8 +4,8 @@ import { LangItem } from './lang-item'
 
 const db = JSON.parse(
   readFileSync(
-      resolve(__dirname, '../db.json'),
-      'utf8',
+    resolve(__dirname, './db.json'),
+    'utf8',
   )
 );
 

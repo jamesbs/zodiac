@@ -1,5 +1,5 @@
 {
-  "name": "@zodiac/lang-item-service",
+  "name": "@zodiac/lang-item-provider",
   "version": "0.1.0",
   "description": "LangItem service for zodiac app",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "j@jamesbs.com",
   "license": "MIT",
   "dependencies": {
+    "@zodiac/lang-item-core": "0.1.0",
     "grpc": "^1.13.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1"

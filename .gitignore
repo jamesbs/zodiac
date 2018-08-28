@@ -6,3 +6,5 @@ dist
 npm-debug.log
 .angulardoc.json
 coverage
+yarn-error.log
+.tgz

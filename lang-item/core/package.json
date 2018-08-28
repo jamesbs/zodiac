@@ -1,14 +1,8 @@
 {
   "name": "@zodiac/lang-item-core",
   "version": "0.1.0",
-  "description": "Core library of the zodiac lang item service.",
-  "main": "index.js",
+  "description": "Core definitions of zodiac lang items",
   "repository": "git@github.com:jamesbs/zodiac-lang-item-core.git",
   "author": "James Salas <j@jamesbs.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@angular/common": "^6.0.9",
-    "@zodiac/core": "file:../../core",
-    "rxjs": "^6.2.2"
-  }
+  "license": "MIT"
 }
