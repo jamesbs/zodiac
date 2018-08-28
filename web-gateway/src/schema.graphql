@@ -1,0 +1,7 @@
+type Query {
+  getLangItem: LangItem
+}
+
+type LangItem {
+  id: ID
+}

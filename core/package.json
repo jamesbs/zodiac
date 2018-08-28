@@ -1,0 +1,9 @@
+{
+  "name": "@zodiac/core",
+  "version": "0.1.0",
+  "description": "Core library of the zodiac app.",
+  "main": "src/index.ts",
+  "repository": "git@github.com:jamesbs/zodiac-core.git",
+  "author": "James Salas <j@jamesbs.com>",
+  "license": "MIT"
+}

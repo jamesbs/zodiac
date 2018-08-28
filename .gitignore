@@ -1,0 +1,8 @@
+.awcache
+.DS_Store
+typings
+node_modules
+dist
+npm-debug.log
+.angulardoc.json
+coverage

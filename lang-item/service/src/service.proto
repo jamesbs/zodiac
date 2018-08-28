@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "lang-item.proto";
+import "id.proto";
+
+service LangItemService {
+  rpc getById (Id) returns (LangItem);
+}
