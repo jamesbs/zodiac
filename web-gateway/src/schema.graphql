@@ -1,5 +1,5 @@
 type Query {
-  getLangItem: LangItem
+  getLangItem(id: ID!): LangItem
 }
 
 type LangItem {

@@ -8,11 +8,15 @@ const langItemClient = new langItemProto.LangItemService(
   grpc.credentials.createInsecure()
 )
 
-langItemClient.getById({ id: '1' }, (err, response) => {
-  if(err) {
-    console.log('error!')
-    console.log(err)
-  } else {
-    console.log('response:', JSON.parse(response))
-  }
-})
+export function getLangItem({ id }: { id: string }) {
+  return new Promise((resolve, reject) => {
+    langItemClient.getById({ id }, (err, response) => {
+      console.log('res?', response)
+      if(err) {
+        reject(err)
+      } else {
+        resolve(response)
+      }
+    })
+  })
+}

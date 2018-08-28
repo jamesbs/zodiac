@@ -8,9 +8,7 @@ const server = new grpc.Server()
 const startServer = () => {
   server.addService(
     proto.LangItemService.service,
-    {
-      getById: passThroughRequest(getById),
-    })
+    LangItemService)
 
   server.bind('0.0.0.0:11000', grpc.ServerCredentials.createInsecure())
   server.start()
