@@ -11,8 +11,8 @@ services:
     networks:
       - 'zodiac'
   zodiac-web-gateway:
-    build: './web-gateway'
-    image: 'zodiac-web-gateway'
+    build: './gateway'
+    image: 'zodiac-gateway'
     volumes:
       - ./web-gateway/src:/app/src
     depends_on:
