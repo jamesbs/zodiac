@@ -1,11 +1,9 @@
 FROM node:10-alpine
 
 RUN mkdir /app
-WORKDIR /app
-RUN npm i -g yarn
+WORKDIR /apps
 
 COPY . .
-RUN yarn
-COPY ../lang-item/service/src/service.proto .
+RUN npm install
 
-CMD ["/usr/local/bin/yarn", "start"]
+CMD ["/usr/local/bin/npm", "start"]
