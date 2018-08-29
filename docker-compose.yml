@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  zodiac-lang-item-provider:
+    build: './lang-item/provider'
+    image: 'zodiac-lang-item-provider'
+    volumes:
+      - ./lang-item/provider/src:/app/src
+    ports:
+      - '11000:11000'
+    networks:
+      - 'zodiac'
+  zodiac-web-gateway:
+    build: './web-gateway'
+    image: 'zodiac-web-gateway'
+    volumes:
+      - ./web-gateway/src:/app/src
+    depends_on:
+      - 'zodiac-lang-item-provider'
+    ports:
+      - '5000:5000'
+    networks:
+      - 'zodiac'
+
+networks:
+  zodiac:

@@ -1,1 +1,1 @@
-export const langItemServiceUrl = 'localhost:11000'
+export const langItemServiceUrl = 'zodiac-lang-item-provider:11000'
