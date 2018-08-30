@@ -2,4 +2,6 @@ syntax = "proto3";
 
 message LangItem {
   string id = 1;
+  string chinese = 2;
+  string pinyin = 3;
 }

@@ -1,0 +1,14 @@
+<app-history-panel
+  [previous]="hasPrevious"
+  [next]="hasNext"
+  [backward]="previous?.move"
+  [forward]="next?.move">
+</app-history-panel>
+<div class="cards">
+  <app-card
+    class="card"
+    [card]="card$ | async"
+    [active]="true"
+    [complete]="next?.move">
+  </app-card>
+</div>

@@ -1,0 +1,29 @@
+<div class="panel">
+  <div class="move back">
+    <a [class.visible]="previous | async"
+      (click)="backward()"
+      (mouseover)="backwardEcho.mouseover()"
+      (mouseout)="backwardEcho.mouseout()">
+      <i class="fa fa-chevron-left"></i>
+    </a>
+    <div class="echo">
+      <i class="fa fa-chevron-left" [class.in]="(backwardEcho.effect$ | async) === 1"></i>
+      <i class="fa fa-chevron-left" [class.in]="(backwardEcho.effect$ | async) === 2"></i>
+      <i class="fa fa-chevron-left" [class.in]="(backwardEcho.effect$ | async) === 3"></i>
+    </div>
+  </div>
+  <div class="move forward">
+    <a [class.visible]="next | async"
+      (click)="forward()"
+      (mouseover)="forwardEcho.mouseover()"
+      (mouseout)="forwardEcho.mouseout()">
+      <i class="fa fa-chevron-right"></i>
+    </a>
+
+    <div class="echo">
+      <i class="fa fa-chevron-right" [class.in]="(forwardEcho.effect$ | async) === 1"></i>
+      <i class="fa fa-chevron-right" [class.in]="(forwardEcho.effect$ | async) === 2"></i>
+      <i class="fa fa-chevron-right" [class.in]="(forwardEcho.effect$ | async) === 3"></i>
+    </div>
+  </div>
+</div>

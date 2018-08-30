@@ -1,0 +1,14 @@
+<div class="chinese">{{character?.chinese}}</div>
+<div class="pinyin">
+  <app-intro-input
+    class="pinyin-input"
+    hintDirection="up"
+    [tests]="tests"
+    [passes]="passes"
+    [isComplete]="allComplete"
+    [complete]="onComplete"
+    [failure]="failure"
+    [focus]="focus"
+    [blur]="blur">
+  </app-intro-input>
+</div>
