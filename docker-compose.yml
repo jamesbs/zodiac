@@ -10,15 +10,24 @@ services:
       - '11000:11000'
     networks:
       - 'zodiac'
-  zodiac-web-gateway:
+  zodiac-gateway:
     build: './gateway'
     image: 'zodiac-gateway'
     volumes:
-      - ./web-gateway/src:/app/src
+      - ./gateway/src:/app/src
     depends_on:
       - 'zodiac-lang-item-provider'
     ports:
       - '5000:5000'
+    networks:
+      - 'zodiac'
+  zodiac-web:
+    build: './web'
+    image: 'zodiac-web'
+    volumes:
+      - ./web/src:/app/src
+    ports:
+      - '4200:4200'
     networks:
       - 'zodiac'
 

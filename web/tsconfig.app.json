@@ -1,17 +1,3 @@
 {
-  "compilerOptions": {
-    "module": "es6",
-    "target": "es6",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "sourceMap": true,
-    "experimentalDecorators": true
-  },
-  "awesomeTypescriptLoaderOptions": {
-    "useCache": true
-  },
-  "angularCompilerOptions": {
-    "preserveWhitespace": false
-  }
+  "extends": "./tsconfig.json"
 }

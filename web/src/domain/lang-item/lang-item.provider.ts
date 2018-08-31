@@ -4,7 +4,7 @@ import { LangItem } from './lang-item'
 import { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
 
-const baseUrl = 'http://localhost:8999'
+const baseUrl = 'http://localhost:5000'
 
 @Injectable({ providedIn: 'root' })
 export class LangItemProvider {

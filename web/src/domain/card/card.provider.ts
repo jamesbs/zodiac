@@ -35,6 +35,4 @@ export class CardProvider {
   next(): Observable<string> {
     return of('da39a3ee5e6b4b0d3255bfef95601890afd80709').pipe(delay(0))
   }
-
-  constructor() { }
 }

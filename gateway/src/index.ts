@@ -19,4 +19,4 @@ app.use(mount(
 
 app.listen(5000)
 
-console.log('listening to port 5000')
+console.log(`gateway started on port 5000`)

@@ -13,7 +13,7 @@ const startServer = () => {
   server.bind('0.0.0.0:11000', grpc.ServerCredentials.createInsecure())
   server.start()
 
-  console.log('started service')
+  console.log('lang item provider started')
 }
 
 startServer()
