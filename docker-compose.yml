@@ -21,15 +21,6 @@ services:
       - '5000:5000'
     networks:
       - 'zodiac'
-  zodiac-web:
-    build: './web'
-    image: 'zodiac-web'
-    volumes:
-      - ./web/src:/app/src
-    ports:
-      - '4200:4200'
-    networks:
-      - 'zodiac'
 
 networks:
   zodiac:

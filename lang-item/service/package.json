@@ -9,7 +9,7 @@
   "author": "j@jamesbs.com",
   "license": "MIT",
   "dependencies": {
-    "@zodiac/lang-item": "^0.7.0",
+    "@zodiac/lang-item": "^0.8.6",
     "google-protobuf": "^3.6.1",
     "grpc": "^1.13.0",
     "ts-node": "^7.0.1",

@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
+import { LangItem } from '@zodiac/lang-item'
 
 const db = JSON.parse(
   readFileSync(
@@ -25,4 +26,4 @@ export const data: { [key: string]: DataItem } = db.reduce(
     set[unit.id] = unit;
     return set;
   },
-  <{ [key: string]: DataItem }>{});
+  <{ [key: string]: LangItem }>{});

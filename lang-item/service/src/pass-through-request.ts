@@ -1,6 +1,10 @@
-export function passThroughRequest<T>(target: (arg: T) => unknown) {
-  return (call: { request: T }, onComplete) => onComplete(
-    null,
-    target(call.request),
-  )
+import { ServerUnaryCall, sendUnaryData } from 'grpc'
+
+export function passThroughRequest<T, U>(target: (arg: T) => U) {
+  return (call: ServerUnaryCall<T>, onComplete: sendUnaryData<U>) => {
+    onComplete(
+      null,
+      target(call.request),
+    )
+  }
 }

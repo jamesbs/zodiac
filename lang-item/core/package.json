@@ -1,21 +1,24 @@
 {
   "name": "@zodiac/lang-item",
-  "version": "0.7.0",
+  "version": "0.8.6",
   "description": "Core definitions of zodiac lang items",
   "author": "James Salas <j@jamesbs.com>",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "grpc_tools_node_protoc --proto_path=./src --js_out=import_style=commonjs,binary:./src --ts_out=./src --grpc_out=./src --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` id.proto example.proto lang-item.proto lang-item-service.proto"
+    "prepack": "npm run build",
+    "build:proto": "node copy-proto",
+    "build:ts": "tsc",
+    "build": "npm run build:proto && npm run build:ts"
   },
   "devDependencies": {
-    "ts-protoc-gen": "^0.7.6",
+    "@types/node": "^10.9.4",
+    "file-loader": "^2.0.0",
+    "ts-loader": "^5.0.0",
     "typescript": "^3.0.3",
-    "grpc_tools_node_protoc_ts": "^2.3.1"
+    "webpack": "^4.17.2"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "google-protobuf": "*",
+  "dependencies": {
     "grpc": "1.x"
   }
 }
