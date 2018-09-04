@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "prepack": "npm run build",
+    "prepare": "npm run build",
     "build:proto": "node copy-proto",
     "build:ts": "tsc",
     "build": "npm run build:proto && npm run build:ts"

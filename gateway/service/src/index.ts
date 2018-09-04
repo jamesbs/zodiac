@@ -5,7 +5,7 @@ import * as cors from '@koa/cors'
 const koaGraphQL = require('koa-graphql')
 
 import { resolver } from './resolver'
-import { schema } from './schema'
+import { schema } from '@zodiac/gateway'
 
 const app = new Koa()
 app.use(cors())

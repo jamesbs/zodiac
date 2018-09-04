@@ -1,8 +1,22 @@
 {
-  "name": "@zodiac/gateway-core",
-  "version": "0.2.1",
+  "name": "@zodiac/gateway",
+  "version": "0.3.2",
   "description": "Core library for zodiac gateway.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "prepare": "npm run build",
+    "build:files": "node copy-files",
+    "build:ts": "tsc",
+    "build": "npm run build:ts && npm run build:files"
+  },
+  "peerDependencies": {
+    "graphql": "*"
+  },
+  "devDependencies": {
+    "graphql": "*",
+    "@types/node": "^10.9.4",
+    "typescript": "^3.0.3"
+  }
 }
