@@ -1,0 +1,21 @@
+{
+  "name": "@zodiac/lang-item-service",
+  "version": "0.1.0",
+  "description": "LangItem service for zodiac app",
+  "scripts": {
+    "start": "ts-node src/index"
+  },
+  "main": "src/index.ts",
+  "author": "j@jamesbs.com",
+  "license": "MIT",
+  "dependencies": {
+    "@zodiac/lang-item": "^0.7.0",
+    "google-protobuf": "^3.6.1",
+    "grpc": "^1.13.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.9.1"
+  }
+}

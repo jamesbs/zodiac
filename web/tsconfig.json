@@ -7,12 +7,13 @@
     "strictNullChecks": false,
     "sourceMap": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "es2017",
+      "esnext.asynciterable",
+      "dom"
+    ]
   },
-  "lib": [
-    "es2017",
-    "dom"
-  ],
   "angularCompilerOptions": {
     "preserveWhitespace": false
   }

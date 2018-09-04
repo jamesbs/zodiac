@@ -1,0 +1,17 @@
+type Query {
+  getLangItem(id: ID!): LangItem
+}
+
+type LangItem {
+  id: ID
+  chinese: String
+  pinyin: String
+  english: [String]
+  examples: [Example]
+}
+
+type Example {
+  chinese: String
+  pinyin: String
+  english: String
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@zodiac/gateway-core",
+  "version": "0.2.1",
+  "description": "Core library for zodiac gateway.",
+  "main": "src/index.js",
+  "author": "",
+  "license": "ISC"
+}

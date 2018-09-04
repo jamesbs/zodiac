@@ -24,7 +24,15 @@
     "@angular/platform-browser": "^6.1.6",
     "@angular/platform-browser-dynamic": "^6.1.6",
     "@angular/router": "^6.1.6",
+    "apollo-angular": "^1.3.0",
+    "apollo-angular-boost": "^1.1.0",
+    "apollo-angular-link-http": "^1.2.0",
+    "apollo-cache-inmemory": "^1.2.0",
+    "apollo-client": "^2.4.0",
+    "apollo-link": "^1.2.0",
     "core-js": "^2.5.7",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "howler": "^2.0.0",
     "normalize.css": "^4.2.0",
     "rxjs": "^6.2.0",
@@ -45,6 +53,6 @@
     "ts-jest": "^22.4.6",
     "ts-node": "^6.0.5",
     "tslint": "^5.10.0",
-    "typescript": "2.7"
+    "typescript": "^2.8.4"
   }
 }

@@ -1,7 +1,11 @@
 syntax = "proto3";
 
+import "example.proto";
+
 message LangItem {
   string id = 1;
   string chinese = 2;
   string pinyin = 3;
+  repeated string english = 4;
+  repeated Example examples = 5;
 }
