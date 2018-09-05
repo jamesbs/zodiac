@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators'
 import { Apollo, gql } from 'apollo-angular-boost'
 import { LangItem } from './lang-item'
 
-const baseUrl = 'http://localhost:5000'
+const baseUrl = 'http://zodiac-gateway:5000'
 
 @Injectable({ providedIn: 'root' })
 export class LangItemProvider {
@@ -14,7 +14,7 @@ export class LangItemProvider {
   ) { }
 
   get(id: string): Observable<LangItem> {
-    return this.apollo.watchQuery({
+    return this.apollo.watchQuery<{ getLangItem: LangItem }>({
       query: gql`
         {
           getLangItem(id: "${id}") {
@@ -33,14 +33,5 @@ export class LangItemProvider {
     }).valueChanges.pipe(map(result => {
       return result.data.getLangItem as LangItem
     }))
-    // return this.http.get<LangItem>(`${baseUrl}/lang-item/${id}`)
-  }
-
-  a() {
-    this.apollo.watchQuery<>(gql``)
-      .valueChanges
-      .subscribe(a => {
-
-      })
   }
 }

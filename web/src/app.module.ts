@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { RouterModule } from '@angular/router'
-import { ApolloBoostModule, ApolloBoost } from 'apollo-angular-boost'
+import { ApolloBoostModule } from 'apollo-angular-boost'
 
 import { SharedModule } from './shared/shared.module'
 import { AppRootComponent } from './presentation/app-root'
