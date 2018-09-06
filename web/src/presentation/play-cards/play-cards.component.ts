@@ -1,14 +1,16 @@
-import { Component, ComponentFactoryResolver, ViewContainerRef, EventEmitter, OnInit } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { trigger, transition, state, style, animate } from '@angular/animations'
-import { Router, ActivatedRoute, NavigationExtras } from '@angular/router'
-import { Observable, merge } from 'rxjs'
+import { Router, ActivatedRoute } from '@angular/router'
+import { merge } from 'rxjs'
 import { mergeMap, map, share } from 'rxjs/operators'
 
 import { CardProvider } from '../../domain/providers'
-import { LangItemProvider } from '../../domain/providers'
 import { SlideDirection, getDirection } from './slide-direction'
 import { createMover } from './mover'
 import { createCardContext } from './card'
+import { GetLangItem } from '../../domain/lang-item/get-lang-item'
+import { LangItem } from '../../domain/lang-item/lang-item'
+import { ApolloQueryResult } from 'apollo-client';
 
 const slide = animate('1200ms cubic-bezier(0.230, 1.000, 0.320, 1.000)')
 
@@ -37,8 +39,12 @@ export class PlayCardsComponent implements OnInit {
     .pipe(
       mergeMap(({ cardId }) => this.cardProvider.get(cardId)),
       mergeMap(card =>
-        this.langItemProvider.get(card.langItemId)
-          .pipe(map(langItem => createCardContext(card, langItem)))),
+        this.getLangItem.watch({ id: card.langItemId })
+          .valueChanges
+          .pipe(
+            map((result: ApolloQueryResult<{ getLangItem: LangItem }>) => result.data.getLangItem),
+            map(langItem => createCardContext(card, langItem))
+          )),
       share())
 
   previous = createMover(this.card$, ({ previous }) => previous)
@@ -48,7 +54,8 @@ export class PlayCardsComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private cardProvider: CardProvider,
-    private langItemProvider: LangItemProvider) { }
+    private getLangItem: GetLangItem,
+  ) { }
 
   ngOnInit() {
     merge(this.previous.moveId$, this.next.moveId$)
