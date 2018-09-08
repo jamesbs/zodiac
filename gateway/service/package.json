@@ -10,8 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "^2.2.2",
-    "@zodiac/core": "^0.1.0",
-    "@zodiac/gateway": "^0.3.2",
+    "@zodiac/gateway": "^0.3.3",
     "@zodiac/lang-item": "^0.8.6",
     "graphql": "^14.0.0",
     "grpc": "^1.14.1",

@@ -1,8 +1,7 @@
 import { langItemServiceUrl } from './config'
 import * as grpc from 'grpc'
-import { LangItem as CoreLangItem } from '@zodiac/core'
 import {
-  LangItem as ServiceLangItem,
+  LangItem,
   createLangItemServiceClient,
 } from '@zodiac/lang-item'
 
@@ -13,8 +12,8 @@ const langItemClient = createLangItemServiceClient(
 )
 
 export function getLangItem({ id }: { id: string }) {
-  return new Promise<CoreLangItem>((resolve, reject) => {
-    langItemClient.getById({ id } as any, (err, response: ServiceLangItem) => {
+  return new Promise<LangItem>((resolve, reject) => {
+    langItemClient.getById({ id } as any, (err, response: LangItem) => {
       if(err) {
         reject(err)
       } else {

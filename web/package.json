@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Flashcard app for learning for chinese",
   "main": "index.js",
+  "author": "James Salas<osdev@jamesbs.com",
+  "license": "ISC",
   "scripts": {
     "start": "npm run dev",
     "dev": "ng serve --host 0.0.0.0",
@@ -13,8 +15,6 @@
     "lint:styl": "stylint",
     "lint:ts": "ng lint"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@angular/animations": "^6.1.6",
     "@angular/common": "^6.1.6",

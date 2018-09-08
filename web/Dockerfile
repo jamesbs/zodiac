@@ -3,8 +3,13 @@ FROM node:10-alpine
 RUN mkdir /app
 WORKDIR /app
 
+RUN npm install -g yarn
+
+COPY package.json /app
+COPY yarn.lock /app
+
+RUN yarn
+
 COPY . .
 
-RUN npm install
-
-CMD [ "/usr/local/bin/npm", "start" ]
+CMD ["/usr/local/bin/yarn", "start"]

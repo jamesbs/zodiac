@@ -1,9 +1,9 @@
 {
   "name": "@zodiac/gateway",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Core library for zodiac gateway.",
   "main": "dist/index.js",
-  "author": "",
+  "author": "James Salas<osdev@jamesbs.com",
   "license": "ISC",
   "scripts": {
     "prepare": "npm run build",

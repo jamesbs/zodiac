@@ -1,5 +1,5 @@
 type Query {
-  getLangItem($id: ID!): LangItem
+  getLangItem(id: ID!): LangItem
 }
 
 type LangItem {
