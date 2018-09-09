@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  zodiac-lang-item:
+    command: yarn dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./lang-item/service/src:/app/src
+  zodiac-gateway:
+    command: yarn dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./gateway/service/src:/app/src
+  zodiac-web:
+    command: yarn dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./web/src:/app/src
+networks:
+  zodiac:

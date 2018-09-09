@@ -1,11 +1,11 @@
-version: '3'
+version: '3.7'
 
 services:
   zodiac-lang-item:
     build: './lang-item/service'
     image: 'zodiac-lang-item'
-    volumes:
-      - ./lang-item/service/src:/app/src
+    environment:
+      - NODE_ENV=production
     ports:
       - '11000:11000'
     networks:
@@ -13,8 +13,8 @@ services:
   zodiac-gateway:
     build: './gateway/service'
     image: 'zodiac-gateway'
-    volumes:
-      - ./gateway/service/src:/app/src
+    environment:
+      - NODE_ENV=production
     depends_on:
       - 'zodiac-lang-item'
     ports:
@@ -24,8 +24,8 @@ services:
   zodiac-web:
     build: './web'
     image: 'zodiac-web'
-    volumes:
-      - ./web/src:/app/src
+    environment:
+      - NODE_ENV=production
     ports:
       - '4200:4200'
     networks:

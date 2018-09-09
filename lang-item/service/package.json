@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "LangItem service for zodiac app",
   "scripts": {
-    "start": "ts-node src/index"
+    "start": "ts-node --transpileOnly src/index",
+    "dev": "ts-node-dev --respawn src/index"
   },
   "main": "src/index.ts",
   "author": "j@jamesbs.com",
@@ -16,6 +17,7 @@
     "typescript": "^3.0.1"
   },
   "devDependencies": {
-    "@types/node": "^10.9.1"
+    "@types/node": "^10.9.1",
+    "ts-node-dev": "^1.0.0-pre.29"
   }
 }

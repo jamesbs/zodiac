@@ -16,6 +16,10 @@
     "lint:ts": "ng lint"
   },
   "dependencies": {
+    "@angular-devkit/build-angular": "^0.7.0-beta.1",
+    "@angular/cli": "^6.0.7",
+    "@angular/compiler": "^6.0.3",
+    "@angular/compiler-cli": "^6.0.3",
     "@angular/animations": "^6.1.6",
     "@angular/common": "^6.1.6",
     "@angular/core": "^6.1.6",
@@ -39,10 +43,6 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.7.0-beta.1",
-    "@angular/cli": "^6.0.7",
-    "@angular/compiler": "^6.0.3",
-    "@angular/compiler-cli": "^6.0.3",
     "@types/jest": "^22.2.3",
     "@types/lodash": "^4.14.109",
     "@types/node": "10.1.4",
