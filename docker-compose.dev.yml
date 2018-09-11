@@ -19,5 +19,3 @@ services:
       - NODE_ENV=development
     volumes:
       - ./web/src:/app/src
-networks:
-  zodiac:

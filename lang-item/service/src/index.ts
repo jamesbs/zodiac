@@ -11,7 +11,7 @@ const startServer = () => {
     LangItemServiceImplementation,
   )
 
-  server.bind('0.0.0.0:11000', ServerCredentials.createInsecure())
+  server.bind('0.0.0.0:80', ServerCredentials.createInsecure())
   server.start()
 
   console.log('lang item provider started')

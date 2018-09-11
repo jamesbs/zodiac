@@ -6,10 +6,8 @@ services:
     image: 'zodiac-lang-item'
     environment:
       - NODE_ENV=production
-    ports:
-      - '11000:11000'
     networks:
-      - 'zodiac'
+      - 'public'
   zodiac-gateway:
     build: './gateway/service'
     image: 'zodiac-gateway'
@@ -18,18 +16,18 @@ services:
     depends_on:
       - 'zodiac-lang-item'
     ports:
-      - '5000:5000'
+      - '5000:80'
     networks:
-      - 'zodiac'
+      - 'public'
   zodiac-web:
     build: './web'
     image: 'zodiac-web'
     environment:
       - NODE_ENV=production
     ports:
-      - '4200:4200'
+      - '4400:80'
     networks:
-      - 'zodiac'
+      - 'public'
 
 networks:
-  zodiac:
+  public:
