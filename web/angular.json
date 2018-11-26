@@ -20,7 +20,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/shared/icons",
-              "src/shared/sound"
+              "src/shared/sound",
+              "src/manifest.json"
             ],
             "styles": [
               "vendor/styles.css"
@@ -32,7 +33,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environment/environment.ts",
-                  "with": "src/environment/environment.production.ts"
+                  "with": "src/environment/environment.prod.ts"
                 },
                 {
                   "replace": "src/config/config.ts",
@@ -47,7 +48,8 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": true,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "serviceWorker": true
             }
           }
         },

@@ -1,3 +1,3 @@
-import { Environment } from './environment.type'
-
-export const environment: Environment = 'development'
+export const environment =  {
+  production: false,
+}

@@ -12,4 +12,4 @@ RUN yarn
 
 COPY . .
 
-CMD ["/usr/local/bin/yarn", "start"]
+ENTRYPOINT ["/usr/local/bin/yarn", "start"]

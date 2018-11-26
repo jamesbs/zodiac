@@ -12,7 +12,9 @@ import { AppRootComponent } from './presentation/app-root'
 import { declarations } from './app.declarations'
 import { Routes } from './app.routes'
 import { config, Config, configProviders } from './config';
-import { GraphQLModule } from './graphql.module'
+import { GraphQLModule } from './graphql.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from './environment/environment'
 
 @NgModule({
   declarations,
@@ -25,6 +27,7 @@ import { GraphQLModule } from './graphql.module'
     SharedModule,
     GraphQLModule,
     ApolloBoostModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
