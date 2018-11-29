@@ -1,5 +1,4 @@
 const selfsigned = require('selfsigned')
-const { writeFileSync } = require('fs')
 
 const sigs = selfsigned.generate(
   [ { name: 'commonName', value: 'localhost' } ],
@@ -58,14 +57,6 @@ const sigs = selfsigned.generate(
     ],
   })
 
-writeFileSync(
-  './dist/key.pem',
-  sigs.private,
-  { encoding: 'utf-8' }
-)
+export const key = sigs.private
 
-writeFileSync(
-  './dist/cert.pem',
-  sigs.cert,
-  { encoding: 'utf-8' }
-)
+export const cert = sigs.cert
