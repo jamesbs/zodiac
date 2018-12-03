@@ -9,6 +9,7 @@ const nodeDeps = [
 ]
 const depsPath = 'deps'
 const nodePath = 'node'
+
 nodeDeps.forEach(async path => {
   try {
     const packagePath = join(__dirname, path)
