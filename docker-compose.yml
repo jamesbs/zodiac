@@ -1,33 +1,50 @@
-version: '3.7'
+version: 3.7
 
 services:
-  zodiac-lang-item:
-    build: './lang-item/service'
-    image: 'zodiac-lang-item'
-    environment:
-      - NODE_ENV=production
+  watchtower:
+    images: v2tec/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+  deps:
+    build: ./deps
+    image: deps
+    depends_on:
+      - watchtower
     networks:
-      - 'public'
-  zodiac-gateway:
-    build: './gateway/service'
-    image: 'zodiac-gateway'
+      - public
+  zodiac-lang-item:
+    build: ./lang-item/service
+    image: zodiac-lang-item
     environment:
       - NODE_ENV=production
     depends_on:
-      - 'zodiac-lang-item'
-    ports:
-      - '5000:80'
+      - deps
     networks:
-      - 'public'
-  zodiac-web:
-    build: './web'
-    image: 'zodiac-web'
+      - public
+  zodiac-gateway:
+    build: ./gateway/service
+    image: zodiac-gateway
     environment:
       - NODE_ENV=production
+    depends_on:
+      - deps
+      - zodiac-lang-item
     ports:
-      - '8080:8080'
+      - 5000:80
     networks:
-      - 'public'
+      - public
+  zodiac-web:
+    build: ./web
+    image: zodiac-web
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - deps
+    ports:
+      - 8080:8080
+    networks:
+      - public
 
 networks:
   public:
