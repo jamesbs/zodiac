@@ -5,10 +5,15 @@
   "main": "dist/index.js",
   "author": "James Salas<osdev@jamesbs.com",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesbs/zodiac.git"
+  },
   "scripts": {
     "prepare": "npm run build",
     "build:files": "node copy-files",
     "build:ts": "tsc",
+    "build:package": "node write-package",
     "build": "npm run build:ts && npm run build:files"
   },
   "peerDependencies": {

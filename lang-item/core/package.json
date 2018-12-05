@@ -2,14 +2,19 @@
   "name": "@zodiac/lang-item",
   "version": "0.8.6",
   "description": "Core definitions of zodiac lang items",
-  "author": "James Salas <j@jamesbs.com>",
+  "author": "James Salas <osdev@jamesbs.com>",
   "license": "MIT",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamesbs/zodiac.git"
+  },
   "scripts": {
     "prepare": "npm run build",
     "build:proto": "node copy-proto",
     "build:ts": "tsc",
-    "build": "npm run build:proto && npm run build:ts"
+    "build:package": "node write-package",
+    "build": "npm run build:proto && npm run build:ts && npm run build:package"
   },
   "devDependencies": {
     "@types/node": "^10.9.4",

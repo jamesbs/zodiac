@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --respawn src/index"
   },
   "main": "src/index.ts",
-  "author": "j@jamesbs.com",
+  "author": "osdev@jamesbs.com",
   "license": "MIT",
   "dependencies": {
     "@zodiac/lang-item": "^0.8.6",
