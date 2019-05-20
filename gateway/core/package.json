@@ -14,7 +14,7 @@
     "build:files": "node copy-files",
     "build:ts": "tsc",
     "build:package": "node write-package",
-    "build": "npm run build:ts && npm run build:files"
+    "build": "npm run build:ts && npm run build:files && npm run build:package"
   },
   "peerDependencies": {
     "graphql": "*"

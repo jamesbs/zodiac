@@ -1,6 +1,10 @@
 {
-  "name": "deps",
+  "name": "@zodiac/deps",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "license": "ISC",
+  "main": "main.js",
+  "dependencies": {
+    "verdaccio": "^3.9.0",
+    "yarn": "^1.12.3"
+  }
 }

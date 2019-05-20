@@ -1,16 +1,11 @@
-version: 3.7
+version: '3.7'
 
 services:
-  watchtower:
-    images: v2tec/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30
   zodiac-deps:
     build: ./deps
     image: zodiac-deps
-    depends_on:
-      - watchtower
+    ports:
+      - 14873:4783
     networks:
       - public
   zodiac-lang-item:

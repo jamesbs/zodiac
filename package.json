@@ -1,4 +1,8 @@
 {
+  "name": "zodiac",
+  "scripts": {
+    "start": "node build && docker-compose up --build"
+  },
   "dependencies": {
     "fs-extra": "^7.0.1"
   }

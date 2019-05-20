@@ -3,7 +3,7 @@
   "version": "0.8.6",
   "description": "Core definitions of zodiac lang items",
   "author": "James Salas <osdev@jamesbs.com>",
-  "license": "MIT",
+  "license": "ISC",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
